@@ -11,7 +11,7 @@ app.get("/",(req,res)=>{
 })
 
 /* ------------------------------------ . ----------------------------------- */
-const io= require('socket.io')(server,{cors:{origin:"http://localhost:3000"}});
+const io= require('socket.io')(server,{cors:{origin:"https://socialifyapp.herokuapp.com/"}});
 let users=[]
 const addUser=(userId,socketId)=>{
 	!users.some((user) => user.userId === userId) &&
