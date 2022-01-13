@@ -6,7 +6,9 @@ const  server = http.createServer(app);
 
 //using middleware
 app.use(express.json());
-
+app.get("/",(req,res)=>{
+	res.send("socket server is running")
+})
 
 /* ------------------------------------ . ----------------------------------- */
 const io= require('socket.io')(server,{cors:{origin:"http://localhost:3000"}});
